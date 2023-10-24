@@ -81,8 +81,7 @@ def toplama():
         total_time += question_time
 
         level_loop += 1
-    elif level_top_select == "2":
-    # Ortalamayı hesapla
+      # Ortalamayı hesapla
       total_questions = correct_answer + wrong_answer
       if total_questions > 0:
           success_rate = (correct_answer / total_questions) * 100
@@ -92,7 +91,7 @@ def toplama():
           print(f"kullanılan toplam süre: {int(total_time)} saniye")
       else:
           print("Hiç soru çözülmedi.")
-
+    elif level_top_select == "2":
       level_loop_count = int(input("kaç soru çözeceğinizi seçin: "))
       level_loop = 0
       correct_answer = 0
@@ -105,9 +104,9 @@ def toplama():
         num2 = random.randint(-9, 0)
 
         start_time = time.time() # süreyi başlat
-        user_answer = int(input(f"{num0} + {num1} - {num2} = "))
+        user_answer = int(input(f"{num0} + {num1} + {num2} = "))
         end_time = time.time() # süreyi durdur
-        pc_answer = num0 + num1 + num2
+        pc_answer = num0 + num1 + num2  
 
         if user_answer == pc_answer:
           correct_answer += 1
@@ -144,7 +143,7 @@ def toplama():
         num2 = random.randint(-99, 0)
 
         start_time = time.time() # süreyi başlat
-        user_answer = int(input(f"{num0} + {num1} - {num2} = "))
+        user_answer = int(input(f"{num0} + {num1} + {num2} = "))
         end_time = time.time() # süreyi durdur
         pc_answer = num0 + num1 + num2
 
